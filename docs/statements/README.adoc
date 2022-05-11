@@ -1,9 +1,9 @@
 :encoding: utf-8
 :lang: ja
 :source-highlighter: rouge
-:author: 株式会社Udzuki
-:revdate: 2021年12月7日
-:revnumber: 1.0版
+:author: 法政大学i
+:revdate: 2022年05月11日
+:revnumber: 1.1版
 :doctype: book
 :version-label:
 :chapter-label:
@@ -35,7 +35,7 @@ Sakaiは、イベントの発生を検知してステートメント変換を行
 
 | イベントコード           | ステートメント変換処理が捕捉するSakaiのイベント +
                              ※Sakaiがステートメント変換を指示した場合のみ対象となり、本イベントが生じる全てのケースでステートメントが送信されるわけではない。
-| 概要                     | https://confluence.sakaiproject.org/display/UDAT/Sakai+12.x+Event+Table+Descriptions[Sakaiのイベント一覧]から転記（一部改変）
+| 概要                     | https://sakaiproject.atlassian.net/wiki/spaces/UDAT/pages/10225156725/Sakai+12.x+Event+Table+Descriptions[Sakaiのイベント一覧]から転記（一部改変）
 | 操作例                   | ステートメント送信を伴う操作の例
 | ユーザの役割             | （対象操作の想定ユーザ） +
                              学習者（生徒）またはインストラクター（教師）
@@ -53,7 +53,7 @@ Sakaiは、イベントの発生を検知してステートメント変換を行
 [NOTE]
 ====
 Sakaiのイベント一覧 +
-https://confluence.sakaiproject.org/display/UDAT/Sakai+12.x+Event+Table+Description
+https://sakaiproject.atlassian.net/wiki/spaces/UDAT/pages/10225156725/Sakai+12.x+Event+Table+Descriptions
 ====
 
 全てのステートメントは、以下の構成に従う。各要素の定義については、 https://www.elc.or.jp/files/user/doc/tincan/xAPI_ja.pdf#object[xAPIステートメントの仕様]を参照すること。
