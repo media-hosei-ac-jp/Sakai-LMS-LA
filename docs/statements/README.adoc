@@ -174,7 +174,7 @@ https://www.elc.or.jp/files/user/doc/tincan/xAPI_ja.pdf#object
 }
 ----
 
-== Accouncements
+== Announcements
 
 [cols="25%,75%"]
 |===
@@ -182,8 +182,8 @@ https://www.elc.or.jp/files/user/doc/tincan/xAPI_ja.pdf#object
 
 | イベントコード | annc.read
 | 概要 | Announcement read
-| 操作例 | 1. > Accouncements > Add > Post Announcement +
-          2. > Accouncements > View > `${subject}`
+| 操作例 | 1. > Announcements > Add > Post Announcement +
+          2. > Announcements > View > `${subject}`
 | ユーザの役割 | -
 | ステートメントの実装箇所 | BaseLearningResourceStoreService
 |===
