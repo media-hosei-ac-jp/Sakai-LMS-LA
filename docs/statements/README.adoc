@@ -1,9 +1,9 @@
 :encoding: utf-8
 :lang: ja
 :source-highlighter: rouge
-:author: 法政大学i
-:revdate: 2022年05月11日
-:revnumber: 1.1版
+:author: 法政大学 情報メディア教育研究センター
+:revdate: 2022年11月07日
+:revnumber: 1.2版
 :doctype: book
 :version-label:
 :chapter-label:

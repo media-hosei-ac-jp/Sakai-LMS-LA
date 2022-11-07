@@ -1,9 +1,9 @@
 :encoding: utf-8
 :lang: ja
 :source-highlighter: rouge
-:author: 株式会社Udzuki
-:revdate: 2022年1月13日
-:revnumber: 1.3.0版
+:author: 法政大学 情報メディア教育研究センター
+:revdate: 2022年11月07日
+:revnumber: 1.3.1版
 :doctype: book
 :version-label:
 :chapter-label:
@@ -19,9 +19,9 @@
 :imagesdir: images
 :icons: font
 
-= ラーニングアナリティクス基盤システム: インストール手順
-:header-recto-left-content: ラーニングアナリティクス基盤システム  インストール手順
-:header-verso-left-content: ラーニングアナリティクス基盤システム  インストール手順
+= Sakai-LMS-LA: インストール手順
+:header-recto-left-content: Sakai-LMS-LA: インストール手順
+:header-verso-left-content: Sakai-LMS-LA: インストール手順
 
 
 == インストール
