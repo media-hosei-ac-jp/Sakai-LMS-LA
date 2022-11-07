@@ -24,6 +24,11 @@
 :header-verso-left-content: Sakai-LMS-LA: インストール手順
 
 
+== 前提
+
+* Docker
+* Docker Compose
+
 == インストール
 
 ----
