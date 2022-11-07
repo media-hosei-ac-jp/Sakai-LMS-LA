@@ -79,13 +79,13 @@ Sakaiが提供するデモデータを起動時に登録する場合には `JAVA
 SakaiのMySQLデータベースを起動する。
 
 ----
-$ docker-compose up -d sakai_mysql
+$ sudo docker-compose up -d sakai_mysql
 ----
 
 MySQLの起動完了を確認する。
 
 ----
-$ docker logs -f sakai_mysql
+$ sudo docker logs -f sakai_mysql
 
 ...
 MySQL init process done. Ready for start up.
@@ -96,10 +96,11 @@ MySQL init process done. Ready for start up.
 Sakaiコンテナを起動する。
 
 ----
-$ docker-compose up -d sakai
+$ sudo docker-compose up -d sakai
 ----
 
 http://localhost:8888/portal からSakaiにアクセスできることを確認する。
+アクセス情報はSakai-LMS-LAファイルに記載されている。
 
 == Superset
 NOTE: Caliperステートメントの可視化は未対応
@@ -107,19 +108,19 @@ NOTE: Caliperステートメントの可視化は未対応
 Supersetのコンテナを起動する。
 
 ----
-$ docker-compose up -d superset
+$ sudo docker-compose up -d superset
 ----
 
 Sakaiのステートメントを取り扱うため、外部テーブルを変更し、カラムを追加・リネームする。
 
 ----
-$ docker-compose exec superset-db psql learninglocker -c '
+$ sudo docker-compose exec superset-db psql learninglocker -c '
     ALTER FOREIGN TABLE xapi_statements RENAME "statement.object.definition.description.en" TO "statement.object.definition.description.en-US";
     ALTER FOREIGN TABLE xapi_statements RENAME "statement.object.definition.name.en" TO "statement.object.definition.name.en-US";
     ALTER FOREIGN TABLE xapi_statements ADD "statement.result.extensions" VARCHAR;'
 ----
 
-https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#48-superset%E3%81%AE%E8%A8%AD%E5%AE%9A[Supersetの設定手順]に従い、 `xapi_statements` テーブルをSupersetに追加する。
+https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#48-superset%E3%81%AE%E8%A8%AD%E5%AE%9A[Supersetの設定手順]の4.8.1〜4.8.4に従い、 `xapi_statements` テーブルをSupersetに追加する。
 
 [NOTE]
 ====
