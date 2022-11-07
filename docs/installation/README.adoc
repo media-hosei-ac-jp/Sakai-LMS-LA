@@ -41,7 +41,7 @@ Gitリポジトリのサブディレクトリからビルドするため、Build
 
 ----
 $ cd Sakai-LMS-LA
-$ DOCKER_BUILDKIT=0 docker-compose build
+$ sudo docker-compose build
 ----
 
 == Learning Locker
