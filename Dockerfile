@@ -35,7 +35,7 @@ FROM openjdk:8
 COPY sakai.properties /opt/tomcat/sakai/
 
 # Install MySQL connector
-RUN wget https://downloads.mysql.com/archives/get/p/3/file/mysql-connector-java-5.1.36.tar.gz
+RUN wget http://downloads.mysql.com/archives/get/p/3/file/mysql-connector-java-5.1.36.tar.gz
 RUN tar -zxvf mysql-connector-java-5.1.36.tar.gz
 RUN mkdir /opt/tomcat/lib
 RUN mv mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar /opt/tomcat/lib/mysql-connector-java-5.1.36-bin.jar
