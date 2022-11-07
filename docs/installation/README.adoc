@@ -27,7 +27,7 @@
 == インストール
 
 ----
-$ git clone https://github.com/udzuki/Sakai-LMS-LA.git
+$ git clone https://github.com/media-hosei-ac-jp/Sakai-LMS-LA.git
 ----
 
 == コンテナイメージのビルド
