@@ -50,7 +50,7 @@ $ sudo docker-compose up -d learninglocker
 ----
 
 
-https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#learning-locker%E3%81%AE%E8%A8%AD%E5%AE%9A[Learning Lockerの設定手順]に従い、xAPIステートメントを保存するLRSを作成する。
+https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#learning-locker%E3%81%AE%E8%A8%AD%E5%AE%9A[Learning Lockerの設定手順]の4.1.1〜4.1.4に従い、xAPIステートメントを保存するLRSを作成する。4.2〜4.7は本リポジトリでは使用しない。
 
 ----
 $ sudo docker exec -it learninglocker bash
