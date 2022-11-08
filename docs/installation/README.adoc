@@ -132,10 +132,11 @@ https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#48-superset
 JupyterHubコンテナを起動する。
 
 ----
-$ docker-compose up -d jupyterhub
+$ sudo docker-compose up -d jupyterhub
 ----
 
-https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#49-jupyterhub%E3%81%AE%E8%A8%AD%E5%AE%9A[JupyterHubの設定]に従いログインし設定を行う。
+https://github.com/RCOSDP/LAaaS-docker/blob/release-v3.0/README.adoc#49-jupyterhub%E3%81%AE%E8%A8%AD%E5%AE%9A[JupyterHubの設定]に従いログインし設定を行う。添付されているノートブックは analyze-xapi-statements.ipynb のみとなっていることに注意。
+
 
 [appendix]
 == ダミーステートメントの登録
@@ -166,6 +167,6 @@ dummy-xapi:
 次のコマンドを実行し、LRSにステートメントを登録する。
 
 ----
-$ docker-compose up -d dummy-xapi
-$ docker-compose exec dummy-xapi npm start
+$ sudo docker-compose up -d dummy-xapi
+$ sudo docker-compose exec dummy-xapi npm start
 ----

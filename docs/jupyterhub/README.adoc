@@ -45,6 +45,18 @@ image::notebooks.png[align=center]
   ** 採点されたAssignmentの名前を項目化
 * Supersetへのノートブック実行結果の登録
 
+superset-db コンテナ上に登録された分析結果は以下のコマンドで参照することができる。
+
+$ docker exec -it superset-db psql jupyter -c "SELECT * FROM <tablename>;"
+
+index | object.definition.description.en |object.id            | timestamp
+--------+--------------------------------------------+------------------------------+---------------------------
+    0 | user_loggedin                | http://localhost:8000 | 2019-06-20T14:38:01+09:00
+    …
+    (4 rows)
+
+
+
 == ノートブック実行結果をSupersetで可視化
 ノートブックの実行結果をSupersetで可視化する手順を以降に述べる。
 
