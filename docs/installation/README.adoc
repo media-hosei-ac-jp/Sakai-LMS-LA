@@ -29,6 +29,10 @@
 * Docker
 * Docker Compose
 
+----
+$ sudo service docker start
+----
+
 == インストール
 
 ----

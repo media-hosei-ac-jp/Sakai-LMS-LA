@@ -24,8 +24,8 @@ services:
       DATABASE_NAME: sakai
       DATABASE_USER: sakai
       DATABASE_PASSWORD: sakaipass
-      LRS_USERNAME: b9a51956f741f7093620fccce96194df60ee811f
-      LRS_PASSWORD: 16cea2668f17b24759e9a246b1039f9b844d92f5
+      LRS_USERNAME: 98f1f53e20721e7ad7ed4b768f5f28a975b511ab
+      LRS_PASSWORD: c8b4235b9b675c4b6667968337ea2c0fa98be32c
     ports:
       - "8888:8080"
   dummy-xapi:
@@ -35,11 +35,11 @@ services:
     environment:
       TZ: Asia/Tokyo
       STATEMENT_NUM: 300
-      TIMESTAMP_MIN: "2021-04-01T00:00:00+00:00"
-      TIMESTAMP_MAX: "2021-10-01T00:00:00+00:00"
+      TIMESTAMP_MIN: "2021-12-01T00:00:00+00:00"
+      TIMESTAMP_MAX: "2023-03-01T00:00:00+00:00"
       LRS_URL: http://learninglocker:8081/data/xAPI/
-      LRS_USERNAME: b9a51956f741f7093620fccce96194df60ee811f
-      LRS_PASSWORD: 16cea2668f17b24759e9a246b1039f9b844d92f5
+      LRS_USERNAME: 98f1f53e20721e7ad7ed4b768f5f28a975b511ab
+      LRS_PASSWORD: c8b4235b9b675c4b6667968337ea2c0fa98be32c
   learninglocker:
     image: public.ecr.aws/v8a6v1r8/learninglocker:2.0.0
     container_name: learninglocker

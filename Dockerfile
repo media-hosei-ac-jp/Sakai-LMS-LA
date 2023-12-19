@@ -22,8 +22,10 @@ RUN git clone --depth 1 --branch 12.x https://github.com/Apereo-Learning-Analyti
 WORKDIR SakaiXAPI-Provider
 COPY patches patches
 # Change version to 12.6
-RUN apt-get update -y
-RUN apt-get install -y patch
+RUN echo "deb http://archive.debian.org/debian/ stretch main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security stretch/updates main" >> /etc/apt/sources.list && \
+    apt-get update -y && \
+    apt-get install -y patch
 RUN patch -u pom.xml < ./patches/SakaiXAPI-Provider/pom.xml.patch
 RUN patch -u impl/pom.xml < ./patches/SakaiXAPI-Provider/impl/pom.xml.patch
 RUN patch -u pack/pom.xml < ./patches/SakaiXAPI-Provider/pack/pom.xml.patch
@@ -31,11 +33,13 @@ RUN mvn -s /usr/share/maven/ref/settings.xml clean install sakai:deploy -Dmaven.
 
 FROM openjdk:8
 
+LABEL version="1.0.0"
+
 # Copy Sakai configuration
 COPY sakai.properties /opt/tomcat/sakai/
 
 # Install MySQL connector
-RUN wget http://downloads.mysql.com/archives/get/p/3/file/mysql-connector-java-5.1.36.tar.gz
+RUN wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.36.tar.gz
 RUN tar -zxvf mysql-connector-java-5.1.36.tar.gz
 RUN mkdir /opt/tomcat/lib
 RUN mv mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar /opt/tomcat/lib/mysql-connector-java-5.1.36-bin.jar
@@ -47,3 +51,4 @@ COPY --from=build /opt/tomcat /opt/tomcat
 EXPOSE 8080
 WORKDIR /opt/tomcat/bin
 CMD ./startup.sh && tail -f ../logs/catalina.out
+
